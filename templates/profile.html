@@ -1,1 +1,9 @@
 <!-- add an edit button for logged in user's profile -->
+{% extends 'base.html' %}
+{% block content %}
+<!-- Display  username, bio-->
+ <div id="profile">
+    <h1>{{user.username}}</h1>
+    <p>{{user.bio}}</p>
+ </div>
+{endblock}

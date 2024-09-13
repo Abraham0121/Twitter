@@ -10,6 +10,28 @@
 <body>
     Twitter
     <!-- nav bar with styling -->
+    {% if 'username' in session %}
+    <nav>
+        <div id="for-you">For you</div>
+        <div id="following">Following</div>
+        <!-- If user is within any communities display it -->
+    </nav>
+    {% else %}
+    <!-- Display a login page -->
+    <div id="form-container">
+        <form>
+            <div class="form-group">
+              <label for="username">Username</label>
+              <input type="text" class="form-control" id="username" placeholder="Enter username">
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" id="password" placeholder="Password">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+    </div>
+    {% endif %}
     {% block content %}{% endblock %}
 </body>
 </html>

@@ -1,5 +1,14 @@
 {% extends 'base.html' %}
 {% block content %}
 <!-- display tweets -->
+ <div class="home">
+    {% if user.has_tweet %}
+    <div id="tweet">
+        {% for tweet in tweets%}
+        <p>{{tweet.text}}</p>
+        {% endfor %}
+    </div>
+    {% endif %}
+ </div>
 <!-- my tweets, following tweets, followers tweets -->
 {% endblock %}
