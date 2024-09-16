@@ -1,7 +1,19 @@
 * {
     background-color: black;
+    color:white;
 }
 
 .form-group {
     width: 50%;
+}
+
+/* *****************************************************nav-bars */
+
+#top-nav {
+    display:flex;
+    
+}
+
+#sideways-nav {
+    display: grid;
 }

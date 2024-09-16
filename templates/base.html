@@ -11,27 +11,26 @@
     Twitter
     <!-- nav bar with styling -->
     {% if 'username' in session %}
-    <nav>
+    <nav id="top-nav">
         <div id="for-you">For you</div>
         <div id="following">Following</div>
         <!-- If user is within any communities display it -->
     </nav>
-    {% else %}
-    <!-- Display a login page -->
-    <div id="form-container">
-        <form>
-            <div class="form-group">
-              <label for="username">Username</label>
-              <input type="text" class="form-control" id="username" placeholder="Enter username">
-            </div>
-            <div class="form-group">
-              <label for="password">Password</label>
-              <input type="password" class="form-control" id="password" placeholder="Password">
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
+    <div id="sideways-nav">
+        <a href="" id="twitter-logo"></a>
+      {% if 'username' not in session %}
+        <a href="" id="settings"></a>
+      {% else %}
+        <a href="" id="home"></a>
+        <a href="" id="search"></a>
+        <a href="" id="notifications"></a>
+        <a href="" id="profile"></a>
     </div>
+      {% endif %}
+
     {% endif %}
-    {% block content %}{% endblock %}
+
+    {% block content %}
+    {% endblock %}
 </body>
 </html>
